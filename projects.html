@@ -12,6 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
+  <script src="projects.js"></script>
   <script src="stylessheet" href="projects.css"></script>
 </head>
 <body>
@@ -52,5 +53,48 @@
         </div>
       </div>
     </nav>
+<canvas id="mc" width="1375" height="250" style="border:1px solid black">
+</canvas>
+<script>
+  var canvas;
+  var ctx;
+  var x=500;
+  var y=200;
+  var dx=16;
+  var dy=16;
+  var width=1375;
+  var height=250;
+  function circle() {
+    ctx.beginPath();
+    ctx.fillStyle = "cyan";
+    ctx.arc(x, y, 30, 0, Math.PI * 2, true);
+    ctx.fill();
+    ctx.closePath();
+  }
+  function Clear() {
+    ctx.clearRect(0, 0, width, height);
+  }
+  function init() {
+    canvas = document.getElementById("mc");
+    ctx = canvas.getContext("2d");
+    return setInterval(draw, 15);
+
+  }
+  function draw() {
+    Clear();
+    circle();
+    if (x > width || x < 0)
+
+      dx = -dx;
+    if (y > height || y < 0)
+      dy = -dy;
+    x += dx;
+    y += dy;
+
+
+  }
+  init();
+
+</script>
   </body>
 </html>
