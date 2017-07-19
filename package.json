@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edwards-Tyra/portfolio.git"
+  },
+  "author": "Tyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edwards-Tyra/portfolio/issues"
+  },
+  "homepage": "https://github.com/Edwards-Tyra/portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
