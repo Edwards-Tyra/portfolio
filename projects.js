@@ -1,6 +1,5 @@
 <canvas id="mc" width="1000" height="200" style="border:1px solid black">
 </canvas>
-<script>
 var canvas;
 var ctx;
 var x=500;
@@ -43,4 +42,3 @@ y+=dy;
 
 }
 init();
-</script>
