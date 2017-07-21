@@ -10,57 +10,8 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="scripts.js"></script>
-  <link rel="stylessheet" href="contact.css">
-  <style>
-  .fa {
-  padding: 0px;
-  font-size: 20px;
-  width: 45px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  height: 45px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-#success {
-  background: white;
-  width: 90%;
-  max-width:420px;
-  margin:15px auto;
-  padding:30px;
-  display: none;
-}
-#success i {
-    font-size: 100px;
-    text-align: center;
-    color: green;
-    width: 100%;
-}
-
-#success h2 {
-    color: #333;
-}
-
-</style>
+  <script src="dist/scripts/main.js"></script>
+  <link rel="stylesheet" href="dist/styles/contact.css">
 </head>
 <body>
   <body background="images/ocean.jpg">
@@ -104,7 +55,7 @@
 	<div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">
-          <form class="form-horizontal" form name="contactForm" method="post">
+          <form class="form-horizontal" form name="contactForm" id="contactForm">
           <fieldset>
             <legend class="text-center">Contact Me</legend>
     
