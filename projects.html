@@ -13,92 +13,57 @@
   <link rel="stylessheet" href="dist/styles/projects.css">
 </head>
 <body>
+  <navigation></navigation>
   <body background="images/cloudy-sunset.jpg">
-    <nav class="navbar navbar-inverse bg-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-            aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-          <a class="navbar-brand" href="index.html">Tyra's Portfolio</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="projects.html">Apps/Games</a></li>
-                <li><a href="projects.html">Websites</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Search</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <div id="projects">
-<canvas id="mc" width="1375" height="200" style="border:1px solid black">
-</canvas>
-<script>
-  var canvas;
-  var ctx;
-  var x=500;
-  var y=200;
-  var dx=16;
-  var dy=16;
-  var width=1375;
-  var height=250;
-  function circle() {
-    ctx.beginPath();
-    ctx.fillStyle = "cyan";
-    ctx.arc(x, y, 30, 0, Math.PI * 2, true);
-    ctx.fill();
-    ctx.closePath();
-  }
-  function Clear() {
-    ctx.clearRect(0, 0, width, height);
-  }
-  function init() {
-    canvas = document.getElementById("mc");
-    ctx = canvas.getContext("2d");
-    return setInterval(draw, 15);
+       <div style="background-color:black;color:white;padding:20px;">
+        <h2>Apps/Games</h2>
+        <p>I've done a collection of different games and apps. The programs used to create the games and apps are as listed:
+          Tkinter, Python, Mit app inventor 2, and Scratch.</p>
+      </div>
+      <canvas id="mc" width="1375" height="200" style="border:1px solid black">
+      </canvas>
+      <script>
+        var canvas;
+        var ctx;
+        var x = 500;
+        var y = 200;
+        var dx = 16;
+        var dy = 16;
+        var width = 1375;
+        var height = 250;
+        function circle() {
+          ctx.beginPath();
+          ctx.fillStyle = "cyan";
+          ctx.arc(x, y, 30, 0, Math.PI * 2, true);
+          ctx.fill();
+          ctx.closePath();
+        }
+        function Clear() {
+          ctx.clearRect(0, 0, width, height);
+        }
+        function init() {
+          canvas = document.getElementById("mc");
+          ctx = canvas.getContext("2d");
+          return setInterval(draw, 15);
 
-  }
-  function draw() {
-    Clear();
-    circle();
-    if (x > width || x < 0)
+        }
+        function draw() {
+          Clear();
+          circle();
+          if (x > width || x < 0)
 
-      dx = -dx;
-    if (y > height || y < 0)
-      dy = -dy;
-    x += dx;
-    y += dy;
+            dx = -dx;
+          if (y > height || y < 0)
+            dy = -dy;
+          x += dx;
+          y += dy;
 
 
-  }
-  init();
+        }
+        init();
 
-</script>
-  <div style="background-color:black;color:white;padding:20px;">
-    <h2>Apps/Games</h2>
-    <p>I've done a collection of different games and apps. The programs used to create the games and apps are as listed: Tkinter,
-      Python, Mit app inventor 2, and Scratch.</p>
-  </div>
+      </script>
+  </body>
 
-</body>
 </html>
